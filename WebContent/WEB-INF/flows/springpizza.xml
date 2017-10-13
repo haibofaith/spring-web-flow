@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/webflow
+        http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
+    <view-state id="cart" >
+        <transition on="submit" to="order">
+        </transition>
+    </view-state>
+    <view-state id="order">
+        <transition on="confirm" to="finish">
+        </transition>
+    </view-state>
+    <view-state id="finish">
+        <transition on="toindex" to="index">
+        </transition>
+    </view-state>
+    <end-state id="index">
+    </end-state>
+
+</flow>
